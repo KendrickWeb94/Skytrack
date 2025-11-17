@@ -57,3 +57,39 @@ const CompanyLinks = [
 ];
 
 export default CompanyLinks;
+
+export const ServicesData = [
+  {
+    id: "01",
+    service: "Marine Vessel Construction",
+    builder: "Skytrack West Africa Engineering Division",
+    location: "Port Harcourt, Nigeria",
+    budget: "₦450,000,000",
+    image: "https://images.pexels.com/photos/3819524/pexels-photo-3819524.jpeg",
+  },
+  {
+    id: "02",
+    service: "Offshore Jetty Development",
+    builder: "Skytrack Marine Infrastructure Team",
+    location: "Bonny Island, Nigeria",
+    budget: "₦1,200,000,000",
+    image:
+      "https://images.pexels.com/photos/29247126/pexels-photo-29247126.jpeg",
+  },
+  {
+    id: "03",
+    service: "Logistics & Cargo Transport Operations",
+    builder: "Skytrack Logistics Operations Unit",
+    location: "Lagos – Takoradi Route",
+    budget: "₦300,000,000",
+    image: "https://images.pexels.com/photos/4481260/pexels-photo-4481260.jpeg",
+  },
+  {
+    id: "04",
+    service: "Water Vessel Importation & Commissioning",
+    builder: "Skytrack Vessel Importation Department",
+    location: "Apapa Port, Nigeria",
+    budget: "₦650,000,000",
+    image: "https://images.pexels.com/photos/3075996/pexels-photo-3075996.jpeg",
+  },
+];

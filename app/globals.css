@@ -1,26 +1,27 @@
+@import url("https://fonts.googleapis.com/css2?family=Stack+Sans+Headline:wght@200..700&display=swap");
 @import "tailwindcss";
-
 :root {
   --background: #ffffff;
   --foreground: #171717;
   --primary: #46448f;
   --secondary: #00aff0;
   --font-primary: "Inter", sans-serif;
-  --font-secondary: "DM Sans", sans-serif;
+  --font-secondary: "Stack Sans Text", sans-serif;
+
   --heading: oklch(12.9% 0.042 264.695);
   --heading-secondary: oklch(27.9% 0.041 260.031);
   --paragraph: oklch(55.1% 0.027 264.364);
 }
-
-body {
-  font-family: var(--font-primary);
+.font-dm {
+  font-family: var(--font-secondary) !important;
 }
-
 h1,
 h2,
 h3,
-h4 {
-  font-family: var(--font-secondary);
+h4,
+h5,
+h6 {
+  font-family: "Stack Sans Text", sans-serif;
 }
 
 @theme inline {
@@ -42,6 +43,14 @@ h4 {
     --foreground: #ededed;
   }
 } */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--font-secondary);
+}
 
 body {
   background: var(--background);
@@ -66,6 +75,9 @@ body {
 .saturate-xs {
   filter: invert(100%) grayscale(100%) brightness(200%);
 }
+.saturate-none {
+  filter: invert(0%) grayscale(0%) brightness(0%);
+}
 
 .frame-grid {
   background: url("/Frame.png");
@@ -77,19 +89,53 @@ body {
 
 @layer components {
   .btn {
-    @apply px-4 py-2 rounded-full w-fit text-sm text-white font-medium bg-secondary/60 hover:bg-transparent border border-secondary transition;
+    @apply px-4 py-2 rounded-xl w-fit text-sm text-white border-b-4  font-medium bg-secondary/60 hover:bg-transparent border border-secondary transition;
   }
   .btn-outline {
-    @apply px-4 py-2 rounded-full w-fit text-sm text-white border-white font-medium bg-transparent hover:bg-white border  transition;
+    @apply px-4 py-2 rounded-xl w-fit text-sm text-gray-900 border-white border-b-4  font-medium bg-white/90 border  transition;
   }
   .nav-link {
-    @apply relative cursor-pointer after:content-[''] after:w-0 after:absolute after:-bottom-1 after:left-0  after:bg-white after:h-[1px] rounded-full  hover:after:w-full after:transition-all after:delay-500 after:ease-in-out after:duration-500;
+    @apply relative cursor-pointer after:content-[''] after:w-0 after:absolute after:-bottom-1 after:left-0  after:bg-white after:h-px rounded-full  hover:after:w-full after:transition-all after:delay-500 after:ease-in-out after:duration-500;
   }
   .nav-link-active {
-    @apply relative cursor-pointer after:content-[''] after:absolute after:-bottom-1 after:left-0  after:bg-white after:h-[1px] rounded-full after:w-[35%]  hover:after:w-full after:transition-all after:delay-500 after:ease-in-out after:duration-500;
+    @apply relative cursor-pointer after:content-[''] after:absolute after:-bottom-1 after:left-0  after:bg-white after:h-px rounded-full after:w-[35%]  hover:after:w-full after:transition-all after:delay-500 after:ease-in-out after:duration-500;
   }
 }
 
 button {
   cursor: pointer;
+}
+
+.grid-cat-3 {
+  display: grid;
+  gap: 1.5rem;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+}
+.grid-cat-2 {
+  display: grid;
+  gap: 0rem;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+}
+
+.grid-cat-6 {
+  display: flex;
+  width: 100%;
+  gap: 2rem;
+  justify-content: center;
+}
+
+.stat-bg {
+  background: url(../public/element-4.png);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.service-number {
+  font-size: 72px;
+  font-weight: 300;
+  color: #e2e8f0;
+  min-width: 120px;
+  text-align: center;
+  letter-spacing: -2px;
 }

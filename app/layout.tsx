@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 
-import "../node_modules/@fontsource/dm-sans/index.css";
 import "../node_modules/@fontsource/inter/index.css";
+import "../node_modules/@fontsource/stack-sans-text/index.css";
 import "./globals.css";
 
 export const metadata: Metadata = {
