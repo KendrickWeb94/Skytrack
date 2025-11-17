@@ -3,7 +3,7 @@ import { Blocks, Crown, MapPin } from "lucide-react";
 
 export default function OurServices() {
   return (
-    <div className="md-container space-y-16 w-full">
+    <div className="mx-auto md:max-w-[75%] max-w-[95%] space-y-16 w-full">
       <div className="space-y-4 md:text-center w-full mx-auto md:max-w-xl">
         <h1 className="text-4xl text-gray-950 uppercase font-extrabold">
           Our Services
